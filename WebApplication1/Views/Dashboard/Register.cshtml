@@ -1,0 +1,122 @@
+﻿@model WebApplication1.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Page Title - SB Admin</title>
+    <link href="~/Content/DashboardContent/dist/css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="card-body">
+                                        <form>
+                                            @Html.ValidationSummary(true, "", new { @class = "text" })
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "small mb-1" })
+                                                    <div class="form-group">
+                                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control py-4" } })
+                                                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text" })
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-6">
+                                                    @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "small mb-1" })
+                                                    <div class="form-group">
+                                                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control py-4" } })
+                                                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text" })
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "small mb-1" })
+
+                                                @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control py-4" } })
+                                                @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "email" })
+
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "small mb-1" })
+                                                    <div class="form-group">
+                                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "small mb-1" })
+                                                    <div class="form-group">
+                                                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text" })
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="submit" value="Create" class="btn btn-default" />
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    
+
+                                    <div class="card-footer text-center">
+                                        <div class="small"><a href="~/Content/DashboardContent/dist/register.html">Have an account? Go to login</a></div>
+                                    </div>
+
+                                }
+
+                                <div>
+                                    @Html.ActionLink("Dashboard", "Dashboard")
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/Content/DashboardContent/dist/js/scripts.js"></script>
+
+</body>
+</html>

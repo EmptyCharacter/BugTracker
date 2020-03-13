@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c780aca5-865a-4083-b2b5-807c3075c543" ChangeDateTime="01/29/2020 17:37:06">
+    <Property Name="ElementName" Value="[dbo].[Ticket].[ProjectName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ticket]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7cbfd8b0-b18c-4862-903a-8d01830880b8" ChangeDateTime="01/29/2020 17:59:31">
+    <Property Name="ElementName" Value="[dbo].[Ticket].[Project Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ticket]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProjectName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c318aa54-f0d9-47b8-9a8f-f24da3f585ea" ChangeDateTime="01/29/2020 21:20:30">
+    <Property Name="ElementName" Value="[dbo].[Ticket].[Created]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ticket]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TicketComments" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="79103cc5-cd92-4dfa-ac5d-277f262376af" ChangeDateTime="01/29/2020 21:24:18">
+    <Property Name="ElementName" Value="[dbo].[Ticket].[TicketComment]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ticket]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TicketComments" />
+  </Operation>
+</Operations>
